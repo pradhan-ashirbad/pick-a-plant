@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Plant Catalog - Pick A Plant</title>
+    <link rel="stylesheet" href="assets/css/plants.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+    <div class="page-container">
+        <header class="main-header">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="assets/images/plant-7880652_1920.png" alt="Pick A Plant Logo" class="logo">
+                    <h1>Pick A Plant</h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="plants.html" class="active">Plants</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li class="cart-link">
+                            <a href="cart.html">
+                                <span class="cart-icon">🛒</span> 
+                                Cart (<span id="cart-count">0</span>)
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="plant-catalog-page">
+            <section class="catalog-header">
+                <h2>Explore Our Plant Collection</h2>
+                <p>Discover the perfect green companion for your space</p>
+            </section>
+
+            <section class="plant-filters">
+                <div class="filter-group">
+                    <label for="category-filter">Category:</label>
+                    <select id="category-filter">
+                        <option value="all">All Plants</option>
+                        <option value="indoor">Indoor Plants</option>
+                        <option value="outdoor">Outdoor Plants</option>
+                        <option value="succulents">Succulents</option>
+                        <option value="rare">Rare Plants</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-filter">Price Range:</label>
+                    <select id="price-filter">
+                        <option value="all">All Prices</option>
+                        <option value="0-20">₹0 - ₹50</option>
+                        <option value="20-50">₹50 - ₹150</option>
+                        <option value="50+">₹150+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort-filter">Sort By:</label>
+                    <select id="sort-filter">
+                        <option value="popularity">Popularity</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="newest">Newest Arrivals</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="plant-grid">
+                <div class="plant-card">
+                    <div class="plant-badge new-arrival">New</div>
+                    <img src="assets/images/Succulent Collection.jpg" alt="Succulent">
+                    <div class="plant-details">
+                        <h3>Succulent Collection</h3>
+                        <p>Low maintenance, perfect for beginners</p>
+                        <div class="plant-meta">
+                            <span class="price">₹115.99</span>
+                            <span class="difficulty-level easy">Easy Care</span>
+                        </div>
+                        <div class="plant-actions">
+                            <button onclick="addToCart('Succulent')">Add to Cart</button>
+                            <button class="btn-details">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plant-card">
+                    <img src="assets/images/Snake Plant.jpg" alt="Snake Plant">
+                    <div class="plant-details">
+                        <h3>Snake Plant</h3>
+                        <p>Air-purifying indoor plant</p>
+                        <div class="plant-meta">
+                            <span class="price">₹124.99</span>
+                            <span class="difficulty-level easy">Easy Care</span>
+                        </div>
+                        <div class="plant-actions">
+                            <button onclick="addToCart('Snake Plant')">Add to Cart</button>
+                            <button class="btn-details">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plant-card">
+                    <div class="plant-badge best-seller">Best Seller</div>
+                    <img src="assets/images/Boston Fern.jpg" alt="Fern">
+                    <div class="plant-details">
+                        <h3>Boston Fern</h3>
+                        <p>Lush and tropical indoor plant</p>
+                        <div class="plant-meta">
+                            <span class="price">₹129.99</span>
+                            <span class="difficulty-level moderate">Moderate Care</span>
+                        </div>
+                        <div class="plant-actions">
+                            <button onclick="addToCart('Fern')">Add to Cart</button>
+                            <button class="btn-details">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plant-card">
+                    <img src="assets/images/Desert Cactus.jpg" alt="Cactus">
+                    <div class="plant-details">
+                        <h3>Desert Cactus</h3>
+                        <p>Unique and drought-resistant</p>
+                        <div class="plant-meta">
+                            <span class="price">₹119.99</span>
+                            <span class="difficulty-level easy">Easy Care</span>
+                        </div>
+                        <div class="plant-actions">
+                            <button onclick="addToCart('Cactus')">Add to Cart</button>
+                            <button class="btn-details">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plant-card">
+                    <div class="plant-badge rare">Rare Find</div>
+                    <img src="assets/images/Bonsai Tree.jpg" alt="Bonsai">
+                    <div class="plant-details">
+                        <h3>Bonsai Tree</h3>
+                        <p>Miniature art of Japanese gardening</p>
+                        <div class="plant-meta">
+                            <span class="price">₹179.99</span>
+                            <span class="difficulty-level hard">Advanced Care</span>
+                        </div>
+                        <div class="plant-actions">
+                            <button onclick="addToCart('Bonsai')">Add to Cart</button>
+                            <button class="btn-details">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.svg" alt="Pick A Plant Logo">
+                    <h3>Pick A Plant</h3>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="plants.html">Plants</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Customer Support</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Returns</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">Instagram</a>
+                        <a href="#" class="social-icon">Facebook</a>
+                        <a href="#" class="social-icon">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pick A Plant. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,519 @@
+/* Global Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f7f6;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Root Variables for Colors */
+:root {
+  --primary-color: #2ecc71;
+  --secondary-color: #27ae60;
+  --text-color: #2c3e50;
+  --background-color: #f4f7f6;
+  --white: #ffffff;
+}
+
+/* Header Styles */
+.main-header {
+  background-color: var(--white);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-container .logo {
+  width: 50px;
+  height: 50px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--primary-color);
+}
+
+.cart-link a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #f9fff5;
+  padding: 4rem 2rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Popular Plants */
+.popular-plants {
+  padding: 4rem 2rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--secondary-color);
+}
+
+.plant-catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.plant-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.plant-card:hover {
+  transform: scale(1.05);
+}
+
+.plant-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.plant-details {
+  padding: 1rem;
+}
+
+.plant-details h3 {
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.plant-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.price {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-add-cart {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn-add-cart:hover {
+  background-color: var(--secondary-color);
+}
+
+/* About Page Specific Styles */
+.about-page {
+  padding: 2rem;
+}
+
+.about-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-hero h2 {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.about-hero h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+.about-hero p {
+  color: #7f8c8d;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Mission Section */
+.about-mission {
+  background-color: #f9fafb;
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.mission-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.mission-text,
+.mission-values {
+  flex: 1;
+}
+
+.mission-text h3,
+.mission-values h3 {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+
+.mission-text p,
+.mission-values p {
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+}
+
+.mission-values ul {
+  list-style: none;
+}
+
+.mission-values li {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mission-values li:hover {
+  transform: translateY(-5px);
+}
+
+.mission-values li strong {
+  color: var(--text-color);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* About Team Section */
+.about-team {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.about-team h3 {
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.about-team h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 250px;
+}
+
+.team-member img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+  transform: scale(1.05);
+}
+
+.team-member h4 {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.team-member p {
+  color: #7f8c8d;
+}
+
+/* Contact Page Styles */
+.contact-page {
+  padding: 3rem 2rem;
+}
+
+.contact-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-container h2 {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-container p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f9fafb;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-group button {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  border: none;
+  color: var(--white);
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Footer Styles */
+.main-footer {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo img {
+  width: 50px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-links {
+  display: flex;
+  gap: 3rem;
+}
+
+.footer-section h4 {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: var(--white);
+}
+
+.footer-social h4 {
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--white);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .popular-plants .plant-catalog {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-content {
+    flex-direction: column;
+  }
+
+  .about-team .team-members {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+}

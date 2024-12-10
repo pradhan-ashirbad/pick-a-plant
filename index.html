@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick A Plant - Your Green Home Companion</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+    <div class="page-container">
+        <header class="main-header">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="assets/images/plant-7880652_1920.png" alt="Pick A Plant Logo" class="logo">
+                    <h1>Pick A Plant</h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="plants.html">Plants</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li class="cart-link">
+                            <a href="cart.html">
+                                <span class="cart-icon">🛒</span> 
+                                Cart (<span id="cart-count">0</span>)
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2>Bring Nature Indoors</h2>
+                        <p>Discover the perfect green companions for your living space. Handpicked, carefully nurtured plants delivered straight to your doorstep.</p>
+                        <a href="plants.html" class="btn btn-primary">Explore Our Collection</a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="assets/images/plants.jpg" alt="Beautiful Indoor Plants">
+                    </div>
+                </div>
+            </section>
+
+            <section class="popular-plants container">
+                <h2 class="section-title">Our Popular Plants</h2>
+                <div class="plant-catalog">
+                    <div class="plant-card">
+                        <img src="assets/images/peace-lily.jpg" alt="Peace Lily">
+                        <div class="plant-details">
+                            <h3>Peace Lily</h3>
+                            <p>Elegant air-purifying houseplant</p>
+                            <div class="plant-actions">
+                                <span class="price">₹124.99</span>
+                                <button onclick="addToCart('Peace Lily')" class="btn btn-add-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plant-card">
+                        <img src="assets/images/Spider Plant.jpg" alt="Spider Plant">
+                        <div class="plant-details">
+                            <h3>Spider Plant</h3>
+                            <p>Low maintenance, pet-friendly</p>
+                            <div class="plant-actions">
+                                <span class="price">₹119.99</span>
+                                <button onclick="addToCart('Spider Plant')" class="btn btn-add-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plant-card">
+                        <img src="assets/images/snake-plant-4985304_1920.jpg" alt="Snake Plant">
+                        <div class="plant-details">
+                            <h3>Snake Plant</h3>
+                            <p>Perfect for beginners</p>
+                            <div class="plant-actions">
+                                <span class="price">₹129.99</span>
+                                <button onclick="addToCart('Snake Plant')" class="btn btn-add-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plant-card">
+                        <img src="assets/images/Aloe Vera.jpg" alt="Aloe Vera">
+                        <div class="plant-details">
+                            <h3>Aloe Vera</h3>
+                            <p>Medicinal and decorative</p>
+                            <div class="plant-actions">
+                                <span class="price">₹122.99</span>
+                                <button onclick="addToCart('Aloe Vera')" class="btn btn-add-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plant-card">
+                        <img src="assets/images/Aloe Vera.jpg" alt="Succulent">
+                        <div class="plant-details">
+                            <h3>Succulent</h3>
+                            <p>Compact and stylish</p>
+                            <div class="plant-actions">
+                                <span class="price">₹115.99</span>
+                                <button onclick="addToCart('Succulent')" class="btn btn-add-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <!-- <img src="" alt="Pick A Plant Logo"> -->
+                    <h3>Pick A Plant</h3>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="plants.html">Plants</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Customer Support</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Returns</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">Instagram</a>
+                        <a href="#" class="social-icon">Facebook</a>
+                        <a href="#" class="social-icon">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pick A Plant. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
